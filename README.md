@@ -1,6 +1,6 @@
 
 # <p align="center">
-#    <img src="" width=1024>
+#    <img src="https://github.com/ftamur/iOSPencilKitDrawApp/blob/main/github-assets/pencilkit.jpg" width=512>
 # </p>
 
 A simple draw app designed to get use of Apple Pencil Kit.
@@ -16,5 +16,7 @@ A simple draw app designed to get use of Apple Pencil Kit.
 <br/>
 
 <p align="center">
-    <img src="" width=390>
+     <img src="https://github.com/ftamur/iOSPencilKitDrawApp/blob/main/github-assets/screen%401.png" width=300>
+     <img src="https://github.com/ftamur/iOSPencilKitDrawApp/blob/main/github-assets/screen%402.png" width=300>
+     <img src="https://github.com/ftamur/iOSPencilKitDrawApp/blob/main/github-assets/screen%403.png" width=300>
 </p>
