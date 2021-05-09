@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     @IBAction func pencilBarAction(_ sender: Any) {
         
         canvasView.allowsFingerDrawing.toggle()
-        pencilBarButton.title = canvasView.allowsFingerDrawing ? "Finger" : "Pencil"
+        pencilBarButton.title = canvasView.allowsFingerDrawing ? "Scroll" : "Draw"
         
     }
     
