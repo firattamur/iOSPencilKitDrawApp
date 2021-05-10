@@ -15,11 +15,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var pencilBarButton: UIBarButtonItem!
     @IBOutlet weak var cameraBarButton: UIBarButtonItem!
     
-    let canvasWidth: CGFloat = 768
-    let canvasOverScrollHight: CGFloat = 500
-    
+    private let canvasWidth: CGFloat = 768
+    private let canvasOverScrollHight: CGFloat = 500
+
     private var toolPicker : PKToolPicker!
     
+    private var undoBarButton : UIButton = {
+        
+        let barButton = UIButton()
+        barButton.setImage(UIImage(systemName: "arrowshape.turn.up.left"), for: .normal)
+        barButton.addTarget(self, action: #selector(undo), for: .touchUpInside)
+        barButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return barButton
+        
+    }()
+
+    private var redoBarButton : UIButton = {
+        
+        let barButton = UIButton()
+        barButton.setImage(UIImage(systemName: "arrowshape.turn.up.forward"), for: .normal)
+        barButton.addTarget(self, action: #selector(redo), for: .touchUpInside)
+        barButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return barButton
+        
+    }()
+        
     var drawing = PKDrawing()
     
     @IBOutlet weak var canvasView: PKCanvasView!
@@ -27,6 +49,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // setup top tools bar
+        self.setupNavigationCenterButtons()
         
         canvasView.delegate = self
         canvasView.drawing = drawing
@@ -68,6 +93,31 @@ class ViewController: UIViewController {
         updateContentSizeForDrawing()
         canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
         
+    }
+    
+    @objc private func undo() {
+        
+        
+    }
+    
+    @objc private func redo() {
+        
+        
+    }
+    
+    private func setupNavigationCenterButtons() {
+        
+        let stackView = UIStackView()
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        
+        stackView.addArrangedSubview(self.undoBarButton)
+        stackView.addArrangedSubview(self.redoBarButton)
+        
+        self.navigationItem.titleView = stackView
+
     }
     
     @IBAction func pencilBarAction(_ sender: Any) {

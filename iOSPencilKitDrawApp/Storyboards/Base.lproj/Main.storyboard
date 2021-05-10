@@ -26,22 +26,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Gy5-9u-F3b">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="camera" catalog="system" id="9Pr-Dv-ktt">
-                            <connections>
-                                <action selector="cameraBarAction:" destination="BYZ-38-t0r" id="BrF-ci-nh7"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Scroll" id="SFa-YI-mJW">
-                            <connections>
-                                <action selector="pencilBarAction:" destination="BYZ-38-t0r" id="g89-SB-jcp"/>
-                            </connections>
-                        </barButtonItem>
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="1MS-67-DhJ"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="OEC-Wt-Dae"/>
+                            <barButtonItem title="Trash" image="trash" catalog="system" id="9aE-Ig-jk2"/>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cameraBarButton" destination="9Pr-Dv-ktt" id="2d3-er-2WK"/>
                         <outlet property="canvasView" destination="biO-1X-tik" id="feg-cX-6SE"/>
-                        <outlet property="pencilBarButton" destination="SFa-YI-mJW" id="23b-U6-mgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,7 +64,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
